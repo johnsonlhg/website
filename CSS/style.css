@@ -298,10 +298,8 @@ ol,ul,li {
 }
 
 .header .header-content .header-logo img.logo1 {
-    display: block;
-     width: 100%;
- 
-       margin-left: 20px; 
+     display: block;
+     margin-left: 20px; 
       height: 60px;
 }
 
