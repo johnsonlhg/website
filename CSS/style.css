@@ -300,7 +300,9 @@ ol,ul,li {
 .header .header-content .header-logo img.logo1 {
     display: block;
      width: 100%;
-    height: auto;
+ 
+       margin-left: 20px; 
+      height: 60px;
 }
 
 .header .header-content .header-logo img.logo2 {
