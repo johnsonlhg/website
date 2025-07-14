@@ -298,7 +298,9 @@ ol,ul,li {
 }
 
 .header .header-content .header-logo img.logo1 {
-    display: block
+    display: block;
+     width: 100%;
+    height: auto;
 }
 
 .header .header-content .header-logo img.logo2 {
