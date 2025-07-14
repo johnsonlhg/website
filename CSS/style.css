@@ -52,6 +52,7 @@ img {
     border: none;
     vertical-align: middle;
     max-width: 100%;
+     
 }
 
 ol,ul,li {
@@ -110,7 +111,8 @@ ol,ul,li {
 .img-block {
     display: block;
     width: 100%;
-    height: auto;
+   
+     max-height: 50%; 
 }
 
 ::-webkit-scrollbar {
@@ -270,11 +272,12 @@ ol,ul,li {
 }
 
 .header .header-content {
-    width: 94%;
+    width: 100%;
     height: 90px;
     margin: auto;
     position: relative;
     z-index: 500;
+     background-color:#ffffff;
 }
 
 .header .header-content .header-logo {
@@ -298,7 +301,7 @@ ol,ul,li {
 }
 
 .header .header-content .header-logo img.logo1 {
-     display: block;
+    display: block;
      margin-left: 20px; 
       height: 60px;
 }
@@ -507,7 +510,7 @@ ol,ul,li {
 .header .header-nav ul li.has-custommenu .custommenus .leftmenu {
     box-sizing: border-box;
     position: static!important;
-    flex: 1;
+    flex: 1.5;
     width: 0;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
@@ -582,7 +585,7 @@ ol,ul,li {
 }
 
 .header .header-nav ul li.has-custommenu .custommenus .leftmenu > li > a {
-    font-weight: 500
+    font-weight: 700
 }
 
 .header .header-nav ul li.has-custommenu .custommenus .apps {
@@ -1467,14 +1470,14 @@ ol,ul,li {
     width: 100%;
     display: inline-block;
     line-height: normal;
-    height: auto;
+    font-size: 0;
 }
 
 .footer .footer-content-top .footer-logo img {
     display: block;
     width: auto;
-    height: 26px;
-    margin-top: 1px;
+    height: 56px;
+    margin-top: px;
 }
 
 .footer .footer-content-top .footer-item-bottom {
@@ -3078,12 +3081,12 @@ ul.pagination {
 .product-list .left ul li h4::after {
     content: '';
     border: 4px solid transparent;
-    border-top: 4px solid #888;
+    border-top: 4px solid #a5a3b3;
     border-bottom: none;
     position: absolute;
     width: 0;
     height: 0;
-    right: 0;
+    right: 0px;
     top: 0;
     bottom: 0;
     margin: auto;
@@ -6602,4 +6605,25 @@ ul.pagination {
     font-size: 16px;
     color: #999999;
     line-height: 2;
+}
+.empty-line{height: 15PX;}
+
+.top-bar {
+  background-color: #0066b2; /* 蓝色背景 */
+  color: white;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.top-bar .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.top-bar i {
+  margin-right: 5px;
 }
