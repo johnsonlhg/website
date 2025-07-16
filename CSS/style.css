@@ -115,6 +115,11 @@ ol,ul,li {
      max-height: 50%; 
 }
 
+.img-block2 {
+    display: block; 
+      margin: 0 auto; 
+}
+
 ::-webkit-scrollbar {
     height: 4px;
     width: 3px;
@@ -5294,10 +5299,21 @@ ul.pagination {
     display: flex;
     align-items: center;
 }
+.company-box .right2 {
+    width: calc(100% - 42%);
+    overflow: hidden;
+    float: left;
+    display: flex;
+    align-items: center;
+
+}
 
 .company-box .right img {
     width: 100%;
 }
+
+
+   
 
 .play-btn {
     display: block;
@@ -6626,4 +6642,25 @@ ul.pagination {
 
 .top-bar i {
   margin-right: 5px;
+}
+
+.advantages-title {
+  font-size: 18px; /* 标题字体大小，可按需调整 */
+  font-weight: bold; /* 加粗，突出标题 */
+  margin-bottom: 10px; /* 和下方文本拉开间距 */
+  align-items: center;
+  
+}
+
+.pic {
+  position: relative; /* 父容器相对定位，为子元素绝对定位做参考 */
+  /* 保留原有宽高、背景图等样式 */
+}
+.pic .img-block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 自身宽高的 50% 偏移，实现居中 */
+  max-width: 100%; 
+  max-height: 100%;
 }
