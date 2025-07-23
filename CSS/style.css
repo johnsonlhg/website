@@ -6601,3 +6601,9 @@ ul.pagination {
     color: #999999;
     line-height: 2;
 }
+.top-bar {
+  background-color: #0066b2; /* 蓝色背景 */
+  color: white;
+  font-size: 14px;
+  padding: 5px 0;
+}
