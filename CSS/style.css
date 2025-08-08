@@ -6607,3 +6607,9 @@ ul.pagination {
   font-size: 14px;
   padding: 5px 0;
 }
+.header .header-content .header-logo img.logo3 {
+  width: 60%;
+  height: 50px;
+  margin-top: 10px;
+    /* display: none */
+}
