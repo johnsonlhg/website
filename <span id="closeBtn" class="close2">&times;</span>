@@ -1138,6 +1138,13 @@
       </div>
     </div>
   </div>
+	 <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeBtn" class="close2">&times;</span>
+      <h2>提示</h2>
+
+    </div>
+  </div>
 	 <div id="toast" class="toast">
     <span id="closeBtn2" class="close2">&times;</span>
     <div class="toast-content">
@@ -1225,6 +1232,7 @@
 </body>
 
 </html>
+
 
 
 
