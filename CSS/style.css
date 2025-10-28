@@ -6651,26 +6651,29 @@ ul.pagination {
   font-size: 24px;
   cursor: pointer;
 }
-  /* 提示框容器 */
+ /* 提示框容器 */
         .toast {
             /* display: none; */
             /* 默认隐藏 */
-            border-radius: 15px;
+            /* border-radius: 15px; */
             position: fixed;
             right: 20px;
             bottom: 20px;
             width: 420px;
             background: #fff;
-            border-radius: 8px  ;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             overflow: hidden;
             animation: slideIn 0.5s ease;
             font-family: sans-serif;
             overflow: hidden;  
+            
             padding-bottom: 5px;
+           padding-right: 5px;  
+       
              padding-left: 5px;
-             padding-right: 5px;
         }
+                    
 
         /* 内容区域 */
         .toast-content2 {
@@ -6694,14 +6697,16 @@ ul.pagination {
         }
 
         .toast-text2 h4 {
-            margin: 0 0 10px 0;
+            /* margin: 0 0 10px 0; */
+             display: block;
+             width: 100%;
             font-size: 16px;
             height: 50px;
             width: 100%;
-               border-radius: 15px 15px 0 0;
-          
+               border-radius: 015px 15px 0 0;
+           box-sizing: border-box;  
             background-color: rgb(111, 145, 218);
-              padding-left: 10px;
+              /* padding-left: 10px; */
               padding-top: 20px;
         }
 
@@ -6749,7 +6754,17 @@ ul.pagination {
                 opacity: 1;
             }
         }
-
+#message2 input,
+#message2 textarea {
+  padding-left: 8px; /* 控制文字与输入框边缘的距离 */
+  width: 90%; /* 防止贴边 */
+  margin: 5px 0;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+ 
         #content2{width: 90%;margin: 2PX auto;  height: 50px; border: 1px solid #ccc;}
         #email2{width: 70%;margin: 2PX auto;height: 30px;   border: 1px solid #ccc;}
         #tel2 {width: 70%;margin: 2PX auto; height: 30px; border: 1px solid #ccc;}
