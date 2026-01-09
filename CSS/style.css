@@ -345,7 +345,7 @@ ol,ul,li {
     position: absolute;
     left: 0;
     bottom: 25%;
-    background: #075CAA;
+    background: rgb(102, 131, 209);
     -webkit-transition: all .4s ease;
     -moz-transition: all .4s ease;
     transition: all .4s ease;
@@ -356,7 +356,7 @@ ol,ul,li {
 }
 
 .header .header-nav > ul > li.cur > a {
-    color: #075CAA;
+    color: rgb(102, 131, 209);
 }
 
 .header .header-nav > ul > li > a {
