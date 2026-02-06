@@ -9,7 +9,7 @@
 <meta name="keywords" content="Jacquard Technology,Warp Knitting Machine,Raschel Machine,Tricot Machine,Double Needle Bar Machine,Circular Knitting Machine Spare Parts, Knitting Machine Spare Parts, Textile Machine Spare Parts, Spare Parts Circular Knitting Machinery, Circular Knitting Machine Parts, Knitting Machine Parts" />
   <meta name="description" content="We are manufacturer of Warp Knitting Machine in China, if you want to buy Raschel Machine, Tricot Machine, Double Needle Bar Machine , please contact us. We sincerely hope to establish business relationships and cooperate with you." />
  
-  <title>Tube Guide Needle for Warp Knitting Machines: Precision, Durability, and Yarn Control Redefined</title>
+  <title>Jacquard Technology,</title>
   <link rel="stylesheet" type="text/css" href="CSS/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/animate.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -29,7 +29,7 @@
     <div class="top-bar">
       <div class="container">
         <span><i class="fa fa-envelope"></i> info@maxim-corp.com</span>
-        <span><i class="fa fa-phone"></i> WhatsApp:+8613771990522</span>
+        <span><i class="fa fa-phone"></i> +8613771990522</span>
         <!-- 这里也可以加图标链接 -->
       </div>
     </div>
@@ -989,7 +989,7 @@
               </a>
               <div class="footer-img-show"><img src="upload/wechat.jpg" class="img-center"></div>
             </li>
-			<li>
+            <li>
 							<a href="https://www.linkedin.com/company/108127203/admin/dashboard/" target="_blank">
 								<img src="upload/in.png" class="img-center" alt="In">
 							</a>							 
@@ -1046,13 +1046,9 @@
                     </div> -->
           </div>
           <div class="message-subbox clearfix">
-            <div class="message-submit left">
-              <p>Submit</p>
-            </div>
-            <div class="message-submit-text left">
-              <!-- <p>After submitting, we will contact you as soon as possible.</p> -->
-            </div>
-          </div>
+                         <button type="button"  class="message-submit left">Submit</button>  
+                    </div>
+
         </form>
       </div>
       <div class="message-close">
@@ -1097,13 +1093,14 @@
         processData: false,
         dataType: "json",
         success: function (mes) {
-          if (mes == 1) {
-            alert("Message submitted successfully");
-            window.location.reload();
-          } else if (mes == 2) {
-            layer.alert('Please check the server configuration', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
-            fleshVerify();
-          }
+           if (mes.ok) {
+                       alert("You have submitted sucessfully.");
+                      window.location.reload();
+                    } else if (mes == 2) {
+                        layer.alert('Please check the server configuration', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
+                        fleshVerify();
+                    }
+
 
         }
       })
@@ -1132,103 +1129,7 @@
       // })
     })
   </script>
-  <div id="toast" class="toast">
-    <span id="closeBtn2" class="close2">&times;</span>
-    <div class="toast-content">
-      <!-- <img src="https://via.placeholder.com/50" alt="提示图片"> -->
-      <div class="toast-text2">
-        <h4 style="background-color: rgb(111, 145, 218);padding-top: 10px;; height: 40PX; padding-left: 2px;"> We look
-          forward to communicating with you.</h4>
-        <form id="message2" method="post">
-          <p>Greetings and thanks for your inguiry!</p><br>
-          <p>You can contact us at <strong>info@maxim-corp.com</strong></p><br>
-          <p>Or leave us a message, and we will respond within 24 hrs</p><br>
-          <input type="text" placeholder="Please enter your name" name="realname2" id="realname2" autocomplete="on">
-          <br>
 
-          <input type="text" placeholder="Please enter your phone number" name="tel2" id="tel2" autocomplete="on"><br>
-
-          <input type="text" placeholder="Please enter your email" name="email" id="email2" autocomplete="on">
-          <br>
-          <textarea name="content2" id="content2" placeholder="Please enter your message"></textarea><br>
-
-          <div class="message2-submit"> Submit </div>
-
-
-
-
-        </form>
-      </div>
-
-    </div>
-    <!-- <div class="message-close">
-            <img src="upload/guanbi1.png" alt="" class="img1">
-            <img src="upload/guanbi2.png" alt="" class="img2">
-        </div> -->
-  </div>
-
-
-  <script>
-    window.onload = () => {
-      const toast = document.getElementById("toast");
-      const closeBtn = document.getElementById("closeBtn2");
-
-      // 页面加载后自动显示
-      toast.style.display = "block";
-
-      // 点击关闭按钮隐藏
-      closeBtn.onclick = () => {
-        toast.style.display = "none";
-      };
-    };
-   
-    $(".message2-submit").click(function (e) {
-      e.preventDefault(); 
-      var formdata = new FormData(document.getElementById("message2"));
-        var realname = $.trim($("#realname2").val());
-      var tel = $.trim($("#tel2").val());
-      var email = $.trim($("#email2").val());
-      var content = $.trim($("#content2").val());
-      //	var verify = $.trim($("#verify").val());
-      if (realname === '') { alert('Please input your name.'); return false; }
-
-      if (tel === '') { alert('Please input your telephone number.'); return false; }
-      // var reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/;
-      // if (!reg.test(tel)) { alert('Please fill in a valid telephone number.'); return false; }
-
-        if (email === '') { alert('Please fill in your email.'); return false; }
-       var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-      if (!myreg.test(email)) { alert('Please fill in a valid email address.'); return false; }
-      if (content === '') { alert('Please input your message.'); return false; }
-         $.ajax({
-        url: "https://formspree.io/f/xwpobkza",
-        type: "POST",
-        data: formdata,
-        cache: false,
-        //async: false,
-        contentType: false,
-        processData: false,
-        dataType: "json",
-        success: function (mes) {
-          debugger
-          if (mes.ok === true) {
-            alert("提交成功");
-            window.location.reload();
-          } else if (mes.ok === false) {
-
-            layer.alert('请检查后台邮件配置是否正确', { skin: 'layui-layer-lan', closeBtn: 0, title: "温馨提示：", icon: 2, anim: 2 });
-            fleshVerify();
-          }
-
-        },
-        error: function (xhr, status, error) {
-          console.error("请求出错：", status, error);
-          alert("网络或服务器错误，请稍后再试。");
-        }
-      })
-    })
-
-  </script>
   <script type='text/javascript' src="js/layer/touchTouch.jquery.js"></script>
   <script type="text/javascript">tou
     $(".product-pic").each(function () {
@@ -1269,6 +1170,110 @@
       mySwiper.updateAutoHeight();
     });
   </script>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span id="closeBtn" class="close2">&times;</span>
+      <h2>Message</h2>
+
+    </div>
+  </div>
+  <div id="toast" class="toast">
+    <span id="closeBtn2" class="close2">&times;</span>
+    <div class="toast-content">
+     
+      <div class="toast-text2">
+        <h4 style="background-color: rgb(111, 145, 218);padding-top: 10px;; height: 40PX; padding-left: 2px;">
+          We look forward to communicating with you.</h4>
+        <form id="message2" method="post">
+          <p>Greetings and thanks for your inguiry!</p><br>
+          <p>You can contact us at <strong>info@maxim-corp.com</strong></p><br>
+          <p>Or leave us a message, and we will respond within 24 hrs</p><br>
+          <input type="text" placeholder="Please enter your name" name="realname2" id="realname2"
+            autocomplete="on">
+          <br>
+
+          <input type="text" placeholder="Please enter your phone number" name="tel2" id="tel2"
+            autocomplete="on"><br>
+
+          <input type="text" placeholder="Please enter your email" name="email" id="email2" autocomplete="on">
+          <br>
+          <textarea name="content2" id="content2" placeholder="Please enter your message"></textarea><br>
+
+          <div class="message2-submit"> Submit </div>
+
+
+
+        </form>
+      </div>
+
+    </div>
+    <!-- <div class="message-close">
+            <img src="upload/guanbi1.png" alt="" class="img1">
+            <img src="upload/guanbi2.png" alt="" class="img2">
+        </div> -->
+  </div>
+  <script>
+    window.onload = () => {
+      const toast = document.getElementById("toast");
+      const closeBtn = document.getElementById("closeBtn2");
+
+      // 页面加载后自动显示
+      toast.style.display = "block";
+
+      // 点击关闭按钮隐藏
+      closeBtn.onclick = () => {
+        toast.style.display = "none";
+      };
+    };
+
+    $(".message2-submit").click(function (e) {
+      e.preventDefault();
+      var formdata = new FormData(document.getElementById("message2"));
+      var realname = $.trim($("#realname2").val());
+      var tel = $.trim($("#tel2").val());
+      var email = $.trim($("#email2").val());
+      var content = $.trim($("#content2").val());
+    
+      if (realname === '') { alert('Please input your name.'); return false; }
+
+      if (tel === '') { alert('Please input your telephone number.'); return false; }
+      // var reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/;
+      // if (!reg.test(tel)) { alert('Please fill in a valid telephone number.'); return false; }
+
+      if (email === '') { alert('Please fill in your email.'); return false; }
+      var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+      if (!myreg.test(email)) { alert('Please fill in a valid email address.'); return false; }
+      if (content === '') { alert('Please input your message.'); return false; }
+      $.ajax({
+        url: "https://formspree.io/f/xwpobkza",
+        type: "POST",
+        data: formdata,
+        cache: false,
+        //async: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: function (mes) {
+          debugger
+          if (mes.ok === true) {
+            alert("You have submited sucessfully.");
+            window.location.reload();
+          } else if (mes.ok === false) {
+
+            layer.alert('Please check your mail server', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
+            fleshVerify();
+          }
+
+        },
+        error: function (xhr, status, error) {
+          console.error("Request error：", status, error);
+          alert("Network or email server error，please try later。");
+        }
+      })
+    })
+
+  </script>
+
 
 </body>
 
