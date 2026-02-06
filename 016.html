@@ -1072,7 +1072,7 @@
                             </a>
                             <div class="footer-img-show"><img src="upload/wechat.jpg" class="img-center"></div>
                         </li>
-						<li>
+                        <li>
 							<a href="https://www.linkedin.com/company/108127203/admin/dashboard/" target="_blank">
 								<img src="upload/in.png" class="img-center" alt="In">
 							</a>							 
@@ -1132,13 +1132,9 @@
                     </div> -->
                     </div>
                     <div class="message-subbox clearfix">
-                        <div class="message-submit left">
-                            <p>Submit</p>
-                        </div>
-                        <div class="message-submit-text left">
-                            <!-- <p>After submitting, we will contact you as soon as possible.</p> -->
-                        </div>
+                         <button type="button"  class="message-submit left">Submit</button>  
                     </div>
+
                 </form>
             </div>
             <div class="message-close">
@@ -1183,92 +1179,25 @@
                 processData: false,
                 dataType: "json",
                 success: function (mes) {
-                    if (mes == 1) {
-                        alert("Message submitted successfully");
-                        window.location.reload();
+                   if (mes.ok) {
+                       alert("You have submitted sucessfully.");
+                      window.location.reload();
                     } else if (mes == 2) {
                         layer.alert('Please check the server configuration', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
                         fleshVerify();
                     }
 
+
                 }
             })
 
-            // $.ajax({
-            //     url: "/addons/wwh/index/message.html",
-            //     type: "POST",
-            //     data:formdata,
-            //     cache:false,
-            //     async:false,
-            //     contentType: false,
-            //     processData: false,
-            //     dataType:"json",
-            //     success: function(mes){
-            //         if(mes==1){
-            //             alert("提交成功");
-            //             window.location.reload();
-            //         }else if(mes==2){
-            //             layer.alert('请检查后台邮件配置是否正确',{skin: 'layui-layer-lan' ,closeBtn: 0,title:"温馨提示：",icon:2,anim:2});
-            //             fleshVerify();
-            //         }else {
-            //             layer.alert('验证码错误，请重试',{skin: 'layui-layer-lan' ,closeBtn: 0,title:"温馨提示：",icon:2,anim:2});
-            //             fleshVerify();
-            //         }
-            //     }
-            // })
+          
         })
     </script>
-    <div class="message-bg">
-        <div class="message-wrapper">
-            <div class="message-box">
-                <form id="message" method="post">
-                    <div class="message-title">
+    
 
-                        <p class="footer-copy">Greetings and thanks for your inguiry!</p>
-                        <pclass="footer-copy">You can contact us at info@maxim-corp.com</p>
-                            <p class="footer-copy">Or leave us a message, and we will respond within 24 hrs</p>
-                    </div>
-                    <div class="message-list">
-                        <div class="message-text">
-                            <input type="text" placeholder="Please enter your name" name="realname" id="realname"
-                                autocomplete="on">
-                        </div>
-                        <div class="message-text">
-                            <input type="text" placeholder="Please enter your phone number" name="tel" id="tel"
-                                autocomplete="on">
-                        </div>
-                        <div class="message-text">
-                            <input type="text" placeholder="Please enter your email" name="email" id="email"
-                                autocomplete="on">
-                        </div>
-                        <div class="message-text ht">
-                            <textarea name="content" id="content" placeholder="Please enter your message"></textarea>
-                        </div>
-                        <!-- <div class="verify-group">
-                        <div class="message-text left">
-                            <input type="text" placeholder="验证码" name="verify" id="verify" autocomplete="off">
-                        </div>
-                        <div class="verify-img right">
-                            <img id="verifyImgs" src="/addons/wwh/index/verify.html" onclick="this.src='/addons/wwh/index/verify.html?seed='+Math.random()" />
-                        </div>
-                    </div> -->
-                    </div>
-                    <div class="message-subbox clearfix">
-                        <div class="message-submit left">
-                            <p>Submit</p>
-                        </div>
-                        <div class="message-submit-text left">
-                            <!-- <p>After submitting, we will contact you as soon as possible.</p> -->
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="message-close">
-                <img src="upload/guanbi1.png" alt="" class="img1">
-                <img src="upload/guanbi2.png" alt="" class="img2">
-            </div>
-        </div>
-    </div>
+
+
     <div id="toast" class="toast">
         <span id="closeBtn2" class="close2">&times;</span>
         <div class="toast-content">
@@ -1350,7 +1279,7 @@
                 success: function (mes) {
                     debugger
                     if (mes.ok === true) {
-                        alert("提交成功");
+                        alert("You have submited sucessfully");
                         window.location.reload();
                     } else if (mes.ok === false) {
 
@@ -1360,64 +1289,14 @@
 
                 },
                 error: function (xhr, status, error) {
-                    console.error("请求出错：", status, error);
+                    console.error("Request error：", status, error);
                     alert("网络或服务器错误，请稍后再试。");
                 }
             })
         })
 
     </script>
-    <script src="js/layer/layer.js"></script>
-    <script type="text/javascript">
-        //客户留言
-
-        $(".message-submit").click(function () {
-            var formdata = new FormData(document.getElementById("message"));
-
-            var realname = $.trim($("#realname").val());
-            var tel = $.trim($("#tel").val());
-            var email = $.trim($("#email").val());
-            var content = $.trim($("#content").val());
-            var verify = $.trim($("#verify").val());
-            if (realname === '') { alert('Please input your name.'); return false; }
-
-            if (tel === '') { alert('Please input your telephone number.'); return false; }
-            //var reg = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/;
-            // if (!reg.test(tel)) { alert('Please fill in a valid telephone number.'); return false; }
-
-            if (email === '') { alert('Please fill in your email.'); return false; }
-            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-            if (!myreg.test(email)) { alert('Please fill in a valid email address.'); return false; }
-
-            if (content == '') { alert('Plesae input your message.'); return false; }
-            $.ajax({
-                url: "https://formspree.io/f/xwpobkza",
-                type: "POST",
-                data: formdata,
-                cache: false,
-                async: false,
-                contentType: false,
-                processData: false,
-                dataType: "json",
-                success: function (mes) {
-                    if (mes.ok === true) {
-                        alert("提交成功");
-                        window.location.reload();
-                    } else if (mes.ok === false) {
-
-                        layer.alert('请检查后台邮件配置是否正确', { skin: 'layui-layer-lan', closeBtn: 0, title: "温馨提示：", icon: 2, anim: 2 });
-                        fleshVerify();
-                    }
-
-                },
-                error: function (xhr, status, error) {
-                    console.error("请求出错：", status, error);
-                    alert("网络或服务器错误，请稍后再试。");
-                }
-            })
-        })
-    </script>
-
+    
 </body>
 
 </html>
