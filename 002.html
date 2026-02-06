@@ -9,7 +9,7 @@
 <meta name="keywords" content="Jacquard Technology,Warp Knitting Machine,Raschel Machine,Tricot Machine,Double Needle Bar Machine," />
   <meta name="description" content="We are manufacturer of Warp Knitting Machine in China, if you want to buy Raschel Machine, Tricot Machine, Double Needle Bar Machine , please contact us. We sincerely hope to establish business relationships and cooperate with you." />
  
-  <title>Advanced Warp Knitting Technology Powers the Next Generation of Sun-Protective Apparel</title>
+  <title>Jacquard Technology,</title>
   <link rel="stylesheet" type="text/css" href="CSS/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/animate.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
@@ -29,7 +29,7 @@
     	<div class="top-bar">
         <div class="container">
              <span><i class="fa fa-envelope"></i> info@maxim-corp.com</span>
-            <span><i class="fa fa-phone"></i> WhatsApp:+8613771990522</span>
+            <span><i class="fa fa-phone"></i> +8613771990522</span>
     <!-- 这里也可以加图标链接 -->
          </div>
      </div>
@@ -966,7 +966,7 @@
               </a>
               <div class="footer-img-show"><img src="upload/wechat.jpg" class="img-center"></div>
             </li>
-			  <li>
+            <li>
 							<a href="https://www.linkedin.com/company/108127203/admin/dashboard/" target="_blank">
 								<img src="upload/in.png" class="img-center" alt="In">
 							</a>							 
@@ -1074,13 +1074,14 @@
         processData: false,
         dataType: "json",
         success: function (mes) {
-          if (mes == 1) {
-            alert("Message submitted successfully");
-            window.location.reload();
-          } else if (mes == 2) {
-            layer.alert('Please check the server configuration', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
-            fleshVerify();
-          }
+          if (mes.ok) {
+						           alert("You have submitted sucessfully.");
+						          window.location.reload();
+                    } else if (mes == 2) {
+                        layer.alert('Please check the server configuration', { skin: 'layui-layer-lan', closeBtn: 0, title: "Message：", icon: 2, anim: 2 });
+                        fleshVerify();
+                    }
+
 
         }
       })
@@ -1187,7 +1188,7 @@
         processData: false,
         dataType: "json",
         success: function (mes) {
-          debugger
+          
           if (mes.ok === true) {
             alert("提交成功");
             window.location.reload();
